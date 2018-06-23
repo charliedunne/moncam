@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Garden Monitor</title>
+    <link rel="stylesheet" type="text/css" href='/static/style.css' />
+    <body>
+      <div id="container">
+	<div id="header">
+	  <h1>Garden Monitor</h1>
+	</div>
+	<div id="content">
+	  <div id="nav">
+	    <h3>History</h3>
+	    <p align="left">
+	      <ul>
+		<li>08:00</li>
+		<li>10:00</li>
+		<li>12:00</li>
+		<li>14:00</li>
+		<li>16:00</li>
+		<li>18:00</li>
+		<li>20:00</li>
+		<li>22:00</li>
+	      </ul>
+	    </p>
+	  </div>
+	  <div id="main">
+	    <div id="main_header">
+	      <h2>Current status</h2>
+	    </div>
+	    <div id="main_picture">
+	      <a href='/maxsnapshoot/{{image}}'><img src="{{url_for('static', filename=image)}}" alt="My Image" width="600"></a>
+	    </div>
+	    <div id="main_footer">
+	      <a href='/maxsnapshoot/{{image}}'>{{ timestamp }}</a>
+	    </div>
+	  </div>
+	</div>
+	<div id="footer">
+	  <p align="right"><a href='/logout'>logout</a>
+	</div>
+      </div>
+    </body>
+</html>
