@@ -18,6 +18,9 @@ Attributes:
 
 from picamera import PiCamera
 from time import sleep, gmtime, strftime
+from dateutil import tz
+import time
+import datetime
 import os
 
 
@@ -30,8 +33,13 @@ def main():
     2. Capture a image
     """
 
-    # Current timestamp
-    filename = strftime("T%H00.jpg")
+    # Current timestamp (Europe/Madrid Time)
+    from_zone = tz.gettz('UTC')
+    to_zone = tz.gettz('Europe/Madrid')
+    utc = time.gmtime()
+    timestamp = datetime.datetime.now(tz.gettz("Europe/Madrid"))
+    
+    filename = strftime("T" + str(timestamp.hour) + "00.jpg")
 
     with PiCamera() as camera:
 
