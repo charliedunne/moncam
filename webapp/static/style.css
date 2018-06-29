@@ -1,4 +1,70 @@
 body {
-    background: #CCCCCC;
-    color: #000000;
+    background-color: #000000;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#container {
+    background-color: #FFFFFF;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#header {
+    background-color: #66CCFF;
+    color: white;
+    text-align: center;
+    padding: 0px;
+}
+
+#content {
+    clear: both;
+    padding: 10px 10px 10px 10px;
+}
+
+#nav {
+    width: 180px;
+    float: left;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#main {
+    width: 600px;
+    float: right;
+}
+
+#main_header {
+    text-align: center;
+}
+
+#main_picture {
+    text-align: center;
+    background-color: #555555;
+}
+
+#main_footer {
+    text-align: right;
+    background-color: #AABBCC;
+
+}
+
+#footer {
+    clear: both;
+    padding: 0.5px;
+    background-color: #AAAAAA;
+    padding: 1px 10px 1px 10px;
 }
