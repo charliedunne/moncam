@@ -31,13 +31,13 @@ def main():
     """
 
     # Current timestamp
-    filename = strftime("%Y%m%dT%H00.jpg")
+    filename = strftime("T%H00.jpg")
 
     with PiCamera() as camera:
 
         # Camera configuration parameters
-        camera.resolution = (3280, 2464);
-        camera.rotation = 0
+        camera.resolution = (3280, 2464)
+        camera.rotation = -90
         camera.shutter_speed = 0 # AUTO
         camera.exposure_mode = 'night'
         sleep(1);
