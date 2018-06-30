@@ -39,7 +39,7 @@ def main():
     utc = time.gmtime()
     timestamp = datetime.datetime.now(tz.gettz("Europe/Madrid"))
     
-    filename = strftime("T" + str(timestamp.hour) + "00.jpg")
+    filename = strftime("T" + str(timestamp.hour).zfill(2) + "00.jpg")
 
     with PiCamera() as camera:
 
