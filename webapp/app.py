@@ -1,3 +1,16 @@
+#! /usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""Garden Monitor Webserver
+
+This is a Flask application (webserver) that provide to the user the ability to monitor a room telmatically using camera images.
+
+Attributes:
+	None
+
+"""
+
+
 from flask import Flask, render_template, session, request, flash
 from picamera import PiCamera, Color
 from time import sleep, gmtime, strftime
@@ -116,6 +129,6 @@ if __name__ == '__main__':
 
     app.secret_key = os.urandom(12)
     # Run the Web Server
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)
 
     
