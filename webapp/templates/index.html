@@ -44,11 +44,13 @@
 	      <h2>Current status</h2>
 	    </div>
 	    <div id="main_picture">
-	      <a href='/maxsnapshoot/{{image}}'><img src="{{url_for('static', filename=image)}}" alt="My Image" width="600"></a>
+	      <a href='/maxsnapshoot/{{image}}?{{timestamp}}'><img src="{{url_for('static', filename=image)}}?{{timestamp}}" alt="My Image" width="600"></a>
 	    </div>
 	    <div id="main_footer">
-	      <a href='/maxsnapshoot/{{image}}'>{{ timestamp }}</a>
+	      <a href='/maxsnapshoot/{{image}}?{{timestamp}}'>{{timestamp}}</a>
 	    </div>
+	    <br>
+	    <a href="/" class="button">Reload</a>
 	  </div>
 	</div>
 	<div id="footer">
