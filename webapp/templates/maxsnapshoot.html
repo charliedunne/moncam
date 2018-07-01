@@ -3,6 +3,6 @@
     <link rel="stylesheet" href='/static/style.css' />
     <body>
 <!--      <p><img src="{{url_for('static', filename=image)}}" style="transform:rotate(90deg);"></p> -->
-	<p><img src="{{url_for('static', filename=image)}}"></p>
+	<p><img src="{{url_for('static', filename=image)}}?{{timestamp}}"></p>
     </body>
 </html>
