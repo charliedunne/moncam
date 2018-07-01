@@ -1,2 +1,2 @@
 # moncam
-Monitor one room using Rpi and PiCamera
+Monitor remotely one place using Raspberry pi and PiCamera
