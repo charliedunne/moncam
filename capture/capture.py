@@ -16,7 +16,7 @@ Attributes:
 
 """
 
-from picamera import PiCamera
+from picamera import PiCamera, Color
 from time import sleep, gmtime, strftime
 from dateutil import tz
 import time
@@ -47,11 +47,28 @@ def main():
         camera.resolution = (3280, 2464)
         camera.rotation = -90
         camera.shutter_speed = 0 # AUTO
-        camera.exposure_mode = 'night'
-        sleep(1);
+        camera.annotate_text = timestamp.isoformat()
+        camera.annotate_background = Color('white')
+        camera.annotate_foreground = Color('black')
+        camera.annotate_text_size = 50
+        camera.iso = 0
+        #camera.drc_strength = 'high'
+        camera.brightness = 50
+        #camera.contrast = 10
+        camera.exposure_mode = 'auto'
+        camera.sensor_mode = 2
+        camera.framerate = 1
+        camera.meter_mode = 'matrix'
+        #camera.sharpness = -50
+        camera.still_stats = True
+        #camera.awb_mode = 'sunlight'
+        camera.start_preview()
+        sleep(2);
 
         # Take the image
         camera.capture(os.path.join(IMG_PATH, filename))
+
+        camera.stop_preview()
 
 if __name__ == '__main__':
 
